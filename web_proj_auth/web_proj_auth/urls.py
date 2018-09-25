@@ -18,5 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('auth_test.urls', namespace="auth_test"))
+    url(r'', include('auth_test.urls', namespace="auth_test")),
+]
+
+urlpatterns += [
+    url(r'^django-rq/', include('django_rq.urls')),
 ]
